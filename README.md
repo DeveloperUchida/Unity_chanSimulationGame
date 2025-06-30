@@ -3,4 +3,6 @@
 - この作品は[ユニティちゃんライセンス条項](https://unity-chan.com/contents/license_jp/)の元に提供されています<p>
   &copy; Unity Technologies Japan/UCL</p>
 - 歩行モーションは下記のサイトからお借りしました<p>
-[のらそうこ | uploader.jp](https://uu.getuploader.com/nora25/)</p>
+[のらそうこ | uploader.jp](https://uu.getuploader.com/nora25/)
+- 追加した歩行モーション<p>
+[【第17回MMD杯本選】モーション（歩き・走り）配布【フルボイス】 - ニコニコ動画](https://www.nicovideo.jp/watch/sm29445973)
