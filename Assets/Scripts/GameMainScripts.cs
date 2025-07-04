@@ -8,7 +8,7 @@ public class GameMainScripts : MonoBehaviour
     private float RotateSpeed = 0.6f; //回転スピード
 
     private Animator animator;
-    private bool isWorking = false; //歩行フラグ
+    private bool isWalking = false; //歩行フラグ
     // Start is called before the first frame update
     void Start()
     {
@@ -42,13 +42,33 @@ public class GameMainScripts : MonoBehaviour
         }
 
         //アニメーション切り替え機能
-        if (moveKeyPressd && !isWorking)
+        if (moveKeyPressd && !isWalking)
         {
             WakingAnim();
         }
-        else if (isWorking && isWorking)
+        else if (!moveKeyPressd && isWalking)
         {
-            stop();
+            Stop();
+        }
+    }
+
+   // 前進アニメーション開始
+    void WakingAnim()
+    {
+        isWalking = true;
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", true);
+        }
+    }
+
+    // 停止アニメーション
+    void Stop()
+    {
+        isWalking = false;
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", false);
         }
     }
 }
