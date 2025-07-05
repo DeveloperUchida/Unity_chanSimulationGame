@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 237a2ace0fe23084c9cdd0d1311ed775
 PluginImporter:
   externalObjects: {}
-  serializedVersion: 2
+  serializedVersion: 3
   iconMap: {}
   executionOrder:
     MMD4MecanimBulletPhysics: 10001
@@ -12,94 +12,15 @@ PluginImporter:
   isExplicitlyReferenced: 0
   validateReferences: 1
   platformData:
-  - first:
-      : 
-    second:
+    :
       enabled: 0
       settings:
         CPU: AnyCPU
-  - first:
-      : Editor
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-        OS: AnyOS
-  - first:
-      : Linux
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      : LinuxUniversal
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      : N3DS
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      : OSXIntel
-    second:
-      enabled: 1
-      settings:
-        CPU: AnyCPU
-  - first:
-      : OSXIntel64
-    second:
-      enabled: 1
-      settings:
-        CPU: AnyCPU
-  - first:
-      : PSM
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      : PSP2
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      : SamsungTV
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-        STV_MODEL: STANDARD_15
-  - first:
-      : Tizen
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      : WiiU
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      : data
-    second:
-      enabled: 0
-      settings: {}
-  - first:
-      Android: Android
-    second:
+    Android:
       enabled: 1
       settings:
         CPU: ARMv7
-  - first:
-      Any: 
-    second:
+    Any:
       enabled: 0
       settings:
         Exclude Android: 1
@@ -118,107 +39,77 @@ PluginImporter:
         Exclude WindowsStoreApps: 0
         Exclude iOS: 1
         Exclude tvOS: 1
-  - first:
-      Editor: Editor
-    second:
+    CloudRendering:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+    Editor:
       enabled: 1
       settings:
         CPU: AnyCPU
         DefaultValueInitialized: true
         OS: AnyOS
-  - first:
-      EmbeddedLinux: EmbeddedLinux
-    second:
+    EmbeddedLinux:
       enabled: 0
       settings:
         CPU: AnyCPU
-  - first:
-      GameCoreScarlett: GameCoreScarlett
-    second:
+    GameCoreScarlett:
       enabled: 0
       settings:
         CPU: AnyCPU
-  - first:
-      GameCoreXboxOne: GameCoreXboxOne
-    second:
+    GameCoreXboxOne:
       enabled: 0
       settings:
         CPU: AnyCPU
-  - first:
-      LinuxHeadlessSimulation: CloudRendering
-    second:
+    Kepler:
       enabled: 0
       settings:
         CPU: AnyCPU
-  - first:
-      Nintendo Switch: Switch
-    second:
+    Linux64:
       enabled: 0
       settings:
         CPU: AnyCPU
-  - first:
-      PS4: PS4
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      PS5: PS5
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      QNX: QNX
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      Stadia: Stadia
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      Standalone: Linux64
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      Standalone: OSXUniversal
-    second:
+    OSXUniversal:
       enabled: 1
       settings:
         CPU: AnyCPU
-  - first:
-      Standalone: Win
-    second:
-      enabled: 1
-      settings:
-        CPU: AnyCPU
-  - first:
-      Standalone: Win64
-    second:
-      enabled: 1
-      settings:
-        CPU: AnyCPU
-  - first:
-      VisionOS: VisionOS
-    second:
+    PS4:
       enabled: 0
       settings:
         CPU: AnyCPU
-  - first:
-      WebGL: WebGL
-    second:
+    PS5:
       enabled: 0
       settings:
         CPU: AnyCPU
-  - first:
-      Windows Store Apps: WindowsStoreApps
-    second:
+    QNX:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+    Switch:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+    Switch2:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+    VisionOS:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+    WebGL:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+    Win:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+    Win64:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+    WindowsStoreApps:
       enabled: 1
       settings:
         CPU: AnyCPU
@@ -226,23 +117,17 @@ PluginImporter:
         PlaceholderPath: 
         SDK: AnySDK
         ScriptingBackend: AnyScriptingBackend
-  - first:
-      XboxOne: XboxOne
-    second:
+    XboxOne:
       enabled: 0
       settings:
         CPU: AnyCPU
-  - first:
-      iPhone: iOS
-    second:
+    iOS:
       enabled: 0
       settings:
         CPU: AnyCPU
         CompileFlags: 
         FrameworkDependencies: 
-  - first:
-      tvOS: tvOS
-    second:
+    tvOS:
       enabled: 0
       settings:
         CPU: AnyCPU

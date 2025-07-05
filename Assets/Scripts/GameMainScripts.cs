@@ -50,6 +50,9 @@ public class GameMainScripts : MonoBehaviour
         {
             Stop();
         }
+
+        //一時的なConsole出力
+        Debug.Log("isWalking:" + animator.GetBool("isWalking"));
     }
 
    // 前進アニメーション開始
