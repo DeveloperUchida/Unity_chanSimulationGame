@@ -50,10 +50,12 @@ public class GameMainScripts : MonoBehaviour
         }
         else if (!moveKeyPressed && _isWalking)
         {
-            StopAnim();
+            Stop();
         }
 
         Debug.Log("isWalking:" + _animator.GetBool(IsWalkingHash));
+
+        _animator.SetBool("isWalking", moveKeyPressed);
     }
 
     void WalkingAnim()
@@ -65,7 +67,7 @@ public class GameMainScripts : MonoBehaviour
         }
     }
 
-    void StopAnim()
+    void Stop()
     {
         _isWalking = false;
         if (_animator != null)
