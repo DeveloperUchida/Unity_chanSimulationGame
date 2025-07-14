@@ -2,76 +2,75 @@ using UnityEngine;
 
 public class GameMainScripts : MonoBehaviour
 {
+    private float _walkSpeed = 4f; // 歩行スピード（スペル修正）
+    private float _rotateSpeed = 0.6f; // 回転スピード
 
-    private float WarkSppped = 4; //歩行スピード
+    private Animator _animator;
+    private bool _isWalking;
 
-    private float RotateSpeed = 0.6f; //回転スピード
+    // Animatorパラメータのハッシュ化
+    private static readonly int IsWalkingHash = Animator.StringToHash("isWalking");
 
-    private Animator animator;
-    private bool isWalking = false; //歩行フラグ
-    // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        bool moveKeyPressd = false;
+        bool moveKeyPressed = false;
 
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(0, 0, WarkSppped * Time.deltaTime);
-            moveKeyPressd = true;
+            transform.Translate(0, 0, _walkSpeed * Time.deltaTime);
+            moveKeyPressed = true;
         }
+
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0, -RotateSpeed, 0);
-            moveKeyPressd = true;
+            transform.Rotate(0, -_rotateSpeed, 0);
+            moveKeyPressed = true;
         }
+
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(0, 0, -WarkSppped * Time.deltaTime);
-            moveKeyPressd = true;
+            transform.Translate(0, 0, -_walkSpeed * Time.deltaTime);
+            moveKeyPressed = true;
         }
+
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0, RotateSpeed, 0);
-            moveKeyPressd = true;
+            transform.Rotate(0, _rotateSpeed, 0);
+            moveKeyPressed = true;
         }
 
-        //アニメーション切り替え機能
-        if (moveKeyPressd && !isWalking)
+        if (moveKeyPressed && !_isWalking)
         {
-            WakingAnim();
+            WalkingAnim();
         }
-        else if (!moveKeyPressd && isWalking)
+        else if (!moveKeyPressed && _isWalking)
         {
-            Stop();
+            StopAnim();
         }
 
-        //一時的なConsole出力
-        Debug.Log("isWalking:" + animator.GetBool("isWalking"));
+        Debug.Log("isWalking:" + _animator.GetBool(IsWalkingHash));
     }
 
-   // 前進アニメーション開始
-    void WakingAnim()
+    void WalkingAnim()
     {
-        isWalking = true;
-        if (animator != null)
+        _isWalking = true;
+        if (_animator != null)
         {
-            animator.SetBool("isWalking", true);
+            _animator.SetBool(IsWalkingHash, true);
         }
     }
 
-    // 停止アニメーション
-    void Stop()
+    void StopAnim()
     {
-        isWalking = false;
-        if (animator != null)
+        _isWalking = false;
+        if (_animator != null)
         {
-            animator.SetBool("isWalking", false);
+            _animator.SetBool(IsWalkingHash, false);
         }
     }
 }
